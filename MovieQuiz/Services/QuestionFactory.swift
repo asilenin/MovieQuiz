@@ -13,6 +13,10 @@ class QuestionFactory: QuestionFactoryProtocol {
     
     private let questions = QuizQuestionMock.questions.shuffled()
     
+    private func setup(delegate: QuestionFactoryDelegate) {
+        self.delegate = delegate
+    }
+    
     func requestNextQuestion() {
         guard let index = (0..<self.questions.count).randomElement() else {
             delegate?.didReceiveNextQuestion(question: nil)
@@ -21,9 +25,5 @@ class QuestionFactory: QuestionFactoryProtocol {
 
         let question = questions[safe: index]
         delegate?.didReceiveNextQuestion(question: question)
-    }
-    
-    func setup(delegate: QuestionFactoryDelegate) {
-        self.delegate = delegate
     }
 }

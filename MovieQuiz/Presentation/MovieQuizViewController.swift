@@ -13,20 +13,19 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     private let questionsAmount: Int = 10
     private var questionFactory: QuestionFactoryProtocol?
     private var currentQuestion: QuizQuestion?
-    lazy var alertPresenter = AlertPresenter(viewController: self)
+    private lazy var alertPresenter = AlertPresenter(viewController: self)
+    private var statisticService: StatisticServiceProtocol = StatisticService()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        alertPresenter.delegate = self
+        statisticService = StatisticService()
         let questionFactory = QuestionFactory()
         questionFactory.setup(delegate: self)
         self.questionFactory = questionFactory
-
         self.questionFactory?.requestNextQuestion()
-        
-        alertPresenter.delegate = self
     }
     
     
@@ -51,7 +50,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     private func showAnswerResult(isCorrect: Bool) {
         if isCorrect { correctAnswers += 1}
         self.showBorder(isCorrect: isCorrect)
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             guard let self = self else { return }
             self.hideBoarder()
@@ -61,6 +59,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     
     private func showNextQuestionOrResults() {
         if currentQuestionIndex == questionsAmount - 1 {
+            statisticService.store(correct: correctAnswers, total: questionsAmount)
             let resultsViewModel = QuizResultsViewModel( // 2
             title: "Этот раунд окончен!",
             text: "Ваш результат \(correctAnswers)/\(questionsAmount)",
@@ -107,7 +106,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     
     
     // MARK: - Actions
-
     @IBAction private func yesButtonClicked(_ sender: UIButton) {
         sender.isEnabled = false
         guard let currentQuestion = currentQuestion else {
@@ -129,7 +127,5 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
             sender.isEnabled = true
         }
     }
-    
-    // MARK: - Deinitialization
     
 }
