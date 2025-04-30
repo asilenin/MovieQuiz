@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="82d-WG-Zv9">
-                                <rect key="frame" x="20" y="116" width="400" height="757"/>
+                                <rect key="frame" x="20" y="178" width="400" height="661"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-j5-gzt">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="23.666666666666668"/>
@@ -46,7 +46,7 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PiP-WT-Kyi" userLabel="Preview Image">
-                                        <rect key="frame" x="0.0" y="43.666666666666629" width="400" height="600"/>
+                                        <rect key="frame" x="0.0" y="43.666666666666657" width="400" height="497.33333333333337"/>
                                         <color key="backgroundColor" name="YP White"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="PiP-WT-Kyi" secondAttribute="height" multiplier="2:3" id="bxc-e3-IE2"/>
@@ -58,13 +58,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше, чем 5?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aib-Hw-uFH" userLabel="Question Label">
-                                        <rect key="frame" x="0.0" y="663.66666666666663" width="400" height="13.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="561" width="400" height="20"/>
                                         <fontDescription key="fontDescription" name="YSDisplay-Bold" family="YS Display" pointSize="23"/>
                                         <color key="textColor" name="YP White"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uy4-0c-Kmz">
-                                        <rect key="frame" x="0.0" y="697" width="400" height="60"/>
+                                        <rect key="frame" x="0.0" y="601" width="400" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKf-8v-9FD" userLabel="No button">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="60"/>
@@ -112,18 +112,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hvN-i3-3P3">
+                                <rect key="frame" x="210" y="468" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Background"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="82d-WG-Zv9" secondAttribute="trailing" constant="20" id="Ccf-wm-Xid"/>
+                            <constraint firstItem="hvN-i3-3P3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D8h-Bx-8tO"/>
                             <constraint firstItem="82d-WG-Zv9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ITa-9p-8Ae"/>
+                            <constraint firstItem="hvN-i3-3P3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JPP-H8-ZaV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="82d-WG-Zv9" secondAttribute="bottom" id="Poh-Qa-04Y"/>
                             <constraint firstItem="82d-WG-Zv9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="q0S-gU-sgj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ynn-xP-Nuf"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="hvN-i3-3P3" id="yOO-yy-IMD"/>
                         <outlet property="counterLabel" destination="v1X-pG-ggP" id="C19-bo-5c3"/>
                         <outlet property="imageView" destination="PiP-WT-Kyi" id="3Fo-kz-zvF"/>
                         <outlet property="textLabel" destination="aib-Hw-uFH" id="llg-6P-Cg7"/>
@@ -139,6 +145,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZEc-M2-go7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mQC-lo-nuL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -157,7 +164,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Wy5-E6-L2e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZXw-ln-jrY">
-                        <rect key="frame" x="0.0" y="62" width="440" height="44"/>
+                        <rect key="frame" x="0.0" y="124" width="440" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
