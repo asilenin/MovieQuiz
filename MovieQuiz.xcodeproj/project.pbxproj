@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474663992DC13EED00346B04 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474663982DC13EEC00346B04 /* NetworkClient.swift */; };
+		4746639B2DC1401D00346B04 /* MostPopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746639A2DC1401C00346B04 /* MostPopularMovies.swift */; };
+		4746639F2DC1407600346B04 /* MoviesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746639E2DC1407500346B04 /* MoviesLoader.swift */; };
 		47536FD72DA5AE3800F7C5A8 /* QuestionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47536FD62DA5AE2600F7C5A8 /* QuestionFactory.swift */; };
 		47536FD92DA5B04800F7C5A8 /* QuizStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47536FD82DA5B04700F7C5A8 /* QuizStepViewModel.swift */; };
 		47536FDB2DA5B05300F7C5A8 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47536FDA2DA5B05200F7C5A8 /* QuizQuestion.swift */; };
 		47536FDD2DA5B05C00F7C5A8 /* QuizResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47536FDC2DA5B05B00F7C5A8 /* QuizResultsViewModel.swift */; };
 		47617B7F2DB6930C006639AE /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47617B7E2DB69307006639AE /* AlertPresenter.swift */; };
 		47617B832DB69340006639AE /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47617B822DB6933E006639AE /* AlertModel.swift */; };
-		47617B892DB7B86D006639AE /* QuizQuestionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47617B882DB7B86A006639AE /* QuizQuestionMock.swift */; };
 		47617BD72DB811E5006639AE /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47617BD62DB811E1006639AE /* GameResult.swift */; };
 		47617BDB2DB812C6006639AE /* StatisticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47617BDA2DB812BD006639AE /* StatisticService.swift */; };
 		47F71EB52D9416D8004650E0 /* YS Display-Medium 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47F71EB42D9416D8004650E0 /* YS Display-Medium 2.ttf */; };
@@ -29,13 +31,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		474663982DC13EEC00346B04 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		4746639A2DC1401C00346B04 /* MostPopularMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularMovies.swift; sourceTree = "<group>"; };
+		4746639E2DC1407500346B04 /* MoviesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesLoader.swift; sourceTree = "<group>"; };
 		47536FD62DA5AE2600F7C5A8 /* QuestionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFactory.swift; sourceTree = "<group>"; };
 		47536FD82DA5B04700F7C5A8 /* QuizStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStepViewModel.swift; sourceTree = "<group>"; };
 		47536FDA2DA5B05200F7C5A8 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		47536FDC2DA5B05B00F7C5A8 /* QuizResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewModel.swift; sourceTree = "<group>"; };
 		47617B7E2DB69307006639AE /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		47617B822DB6933E006639AE /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
-		47617B882DB7B86A006639AE /* QuizQuestionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionMock.swift; sourceTree = "<group>"; };
 		47617BD62DB811E1006639AE /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		47617BDA2DB812BD006639AE /* StatisticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticService.swift; sourceTree = "<group>"; };
 		47F71EB32D9416D8004650E0 /* YS Display-Bold 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold 2.ttf"; sourceTree = "<group>"; };
@@ -80,8 +84,9 @@
 		611342392B701CF6003FC2A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				47617BD62DB811E1006639AE /* GameResult.swift */,
 				47617B822DB6933E006639AE /* AlertModel.swift */,
+				47617BD62DB811E1006639AE /* GameResult.swift */,
+				4746639A2DC1401C00346B04 /* MostPopularMovies.swift */,
 				47536FD82DA5B04700F7C5A8 /* QuizStepViewModel.swift */,
 				47536FDC2DA5B05B00F7C5A8 /* QuizResultsViewModel.swift */,
 				47536FDA2DA5B05200F7C5A8 /* QuizQuestion.swift */,
@@ -95,9 +100,10 @@
 				47617C332DBB9871006639AE /* Delegates */,
 				47617C322DBB9857006639AE /* Protocols */,
 				47617B7E2DB69307006639AE /* AlertPresenter.swift */,
+				4746639E2DC1407500346B04 /* MoviesLoader.swift */,
+				474663982DC13EEC00346B04 /* NetworkClient.swift */,
 				47617BDA2DB812BD006639AE /* StatisticService.swift */,
 				47536FD62DA5AE2600F7C5A8 /* QuestionFactory.swift */,
-				47617B882DB7B86A006639AE /* QuizQuestionMock.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,10 +253,12 @@
 				47617BD72DB811E5006639AE /* GameResult.swift in Sources */,
 				47536FD72DA5AE3800F7C5A8 /* QuestionFactory.swift in Sources */,
 				AD1ABAB42831907B00B3E448 /* SceneDelegate.swift in Sources */,
+				474663992DC13EED00346B04 /* NetworkClient.swift in Sources */,
 				47536FDB2DA5B05300F7C5A8 /* QuizQuestion.swift in Sources */,
 				47617BDB2DB812C6006639AE /* StatisticService.swift in Sources */,
 				47536FDD2DA5B05C00F7C5A8 /* QuizResultsViewModel.swift in Sources */,
-				47617B892DB7B86D006639AE /* QuizQuestionMock.swift in Sources */,
+				4746639F2DC1407600346B04 /* MoviesLoader.swift in Sources */,
+				4746639B2DC1401D00346B04 /* MostPopularMovies.swift in Sources */,
 				47536FD92DA5B04800F7C5A8 /* QuizStepViewModel.swift in Sources */,
 				47617B7F2DB6930C006639AE /* AlertPresenter.swift in Sources */,
 			);

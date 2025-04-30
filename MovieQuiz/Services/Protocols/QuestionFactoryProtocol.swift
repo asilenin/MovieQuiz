@@ -1,10 +1,5 @@
-//
-//  QuestionFactoryProtocol.swift
-//  MovieQuiz
-//
-//  Created by Anton Silenin on 09.04.2025.
-//
-
 protocol QuestionFactoryProtocol {
     func requestNextQuestion()
+    func loadData()
+    //func configure(delegate: QuestionFactoryDelegate)
 }

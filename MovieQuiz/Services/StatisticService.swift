@@ -1,15 +1,9 @@
-//
-//  StatisticService.swift
-//  MovieQuiz
-//
-//  Created by Anton Silenin on 22.04.2025.
-//
 import Foundation
 
 final class StatisticService: StatisticServiceProtocol {
     
     private let storage: UserDefaults = .standard
-
+    
     private enum Keys: String {
         case correct
         case bestGame
@@ -19,6 +13,8 @@ final class StatisticService: StatisticServiceProtocol {
         case bestGameDate
         case totalQuestions
     }
+    
+    // MARK: - Public
     
     var gamesCount: Int {
         get {
