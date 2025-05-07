@@ -1,3 +1,3 @@
 protocol AlertPresenterDelegate: AnyObject {
-    func alertDidTap()
+    func restartQuiz()
 }

@@ -29,12 +29,6 @@ final class QuestionFactory: QuestionFactoryProtocol {
         }
     }
     
-    /*
-    func configure(delegate: QuestionFactoryDelegate) {
-        self.delegate = delegate
-    }
-     */
-    
     func requestNextQuestion() {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
@@ -47,7 +41,7 @@ final class QuestionFactory: QuestionFactoryProtocol {
             do {
                 imageData = try Data(contentsOf: movie.resizedImageURL)
             } catch {
-                print("Failed to load image")
+                self.delegate?.didFailToLoadImage()
             }
             
             let rating = Float(movie.rating) ?? 0

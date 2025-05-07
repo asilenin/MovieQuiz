@@ -27,15 +27,12 @@ final class StatisticService: StatisticServiceProtocol {
     
     var bestGame: GameResult {
         get {
-            // Добавьте чтение значений полей GameResult(correct, total и date) из UserDefaults,
-            // затем создайте GameResult от полученных значений
             let correct = storage.integer(forKey: Keys.bestGameCorrect.rawValue)
             let total = storage.integer(forKey: Keys.bestGameTotal.rawValue)
             let date = storage.object(forKey: Keys.bestGameDate.rawValue) as? Date ?? Date()
             return GameResult(correct: correct, total: total, date: date)
         }
         set {
-            // Добавьте запись значений каждого поля из newValue в UserDefaults
             storage.set(newValue.correct, forKey: Keys.bestGameCorrect.rawValue)
             storage.set(newValue.total, forKey: Keys.bestGameTotal.rawValue)
             storage.set(newValue.date, forKey: Keys.bestGameDate.rawValue)
@@ -43,7 +40,6 @@ final class StatisticService: StatisticServiceProtocol {
     }
     
     var totalAccuracy: Double {
-        // отношение всех правильных ответов от общего числа вопросов
         let totalCorrectAnswers = storage.integer(forKey: Keys.correct.rawValue)
         let totalQuestionsAnswered = storage.integer(forKey: Keys.totalQuestions.rawValue)
         
