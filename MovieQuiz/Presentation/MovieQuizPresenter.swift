@@ -1,10 +1,10 @@
-import UIKit
+import Foundation
 
 final class MovieQuizPresenter: QuestionFactoryDelegate {
     private var questionFactory: QuestionFactoryProtocol?
     private weak var viewController: MovieQuizViewControllerProtocol?
     private let statisticService: StatisticServiceProtocol!
-
+    
     private var currentQuestion: QuizQuestion?
     
     private let questionsAmount: Int = 10
@@ -24,7 +24,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
     
     func convert(model: QuizQuestion) -> QuizStepViewModel {
         QuizStepViewModel(
-            image: UIImage(data: model.image) ?? UIImage(),
+            imageData: model.image,
             question: model.text,
             questionNumber: "\(currentQuestionIndex + 1)/\(questionsAmount)"
         )
@@ -123,7 +123,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
             
             
             
-            let resultsViewModel = AlertModel( // 2
+            let resultsViewModel = AlertModel(
                 title: "Этот раунд окончен!",
                 message: resultMessage,
                 buttonText: "Сыграть ещё раз")
