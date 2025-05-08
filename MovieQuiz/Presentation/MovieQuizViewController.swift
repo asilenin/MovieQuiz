@@ -12,7 +12,7 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     @IBOutlet private weak var yesButton: UIButton!
     @IBOutlet private weak var noButton: UIButton!
     
-    lazy var alertPresenter = AlertPresenter(viewController: self)
+    lazy private var alertPresenter = AlertPresenter(viewController: self)
     private var presenter: MovieQuizPresenter!
     
     // MARK: - Lifecycle
@@ -24,6 +24,9 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
         presenter = MovieQuizPresenter(viewController: self)
         
         showLoadingIndicator()
+        
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 8
     }
     
     // MARK: - Setup Methods
@@ -48,7 +51,8 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     }
     
     func enableTapOnButtons (_ isEnabled: Bool) {
-        presenter.enableTapOnButtons(isEnabled, noButton: noButton, yesButton: yesButton)
+        noButton.isEnabled = isEnabled
+        yesButton.isEnabled = isEnabled
     }
     
     
@@ -57,8 +61,6 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     }
     
     func showBorder(isCorrect: Bool){
-        imageView.layer.masksToBounds = true
-        imageView.layer.borderWidth = 8
         imageView.layer.borderColor = isCorrect ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
     }
     

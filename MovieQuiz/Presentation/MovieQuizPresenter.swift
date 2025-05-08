@@ -44,11 +44,6 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
         currentQuestionIndex += 1
     }
     
-    func enableTapOnButtons(_ isEnabled: Bool, noButton: UIButton, yesButton: UIButton){
-        noButton.isEnabled = isEnabled
-        yesButton.isEnabled = isEnabled
-    }
-    
     func yesButtonClicked() {
         didAnswer(isYes: true)
     }
