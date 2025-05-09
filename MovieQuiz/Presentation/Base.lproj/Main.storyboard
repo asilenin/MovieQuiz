@@ -39,6 +39,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1X-pG-ggP" userLabel="Index Label">
                                                 <rect key="frame" x="364" y="0.0" width="36" height="23.666666666666668"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Index"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="textColor" name="YP White"/>
                                                 <nil key="highlightedColor"/>
@@ -46,8 +47,9 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PiP-WT-Kyi" userLabel="Preview Image">
-                                        <rect key="frame" x="0.0" y="43.666666666666657" width="400" height="497.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="43.666666666666686" width="400" height="517.33333333333326"/>
                                         <color key="backgroundColor" name="YP White"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Poster"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="PiP-WT-Kyi" secondAttribute="height" multiplier="2:3" id="bxc-e3-IE2"/>
                                         </constraints>
@@ -58,7 +60,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше, чем 5?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aib-Hw-uFH" userLabel="Question Label">
-                                        <rect key="frame" x="0.0" y="561" width="400" height="20"/>
+                                        <rect key="frame" x="0.0" y="581" width="400" height="0.0"/>
                                         <fontDescription key="fontDescription" name="YSDisplay-Bold" family="YS Display" pointSize="23"/>
                                         <color key="textColor" name="YP White"/>
                                         <nil key="highlightedColor"/>
@@ -69,6 +71,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKf-8v-9FD" userLabel="No button">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="60"/>
                                                 <color key="backgroundColor" name="YP White"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="No"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="qtG-HF-pC5"/>
                                                 </constraints>
@@ -90,6 +93,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-q5-9Uc" userLabel="Yes button">
                                                 <rect key="frame" x="210" y="0.0" width="190" height="60"/>
                                                 <color key="backgroundColor" name="YP White"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Yes"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="tintColor" name="Color 1"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -112,7 +116,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hvN-i3-3P3">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hvN-i3-3P3">
                                 <rect key="frame" x="210" y="468" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -132,7 +136,9 @@
                         <outlet property="activityIndicator" destination="hvN-i3-3P3" id="yOO-yy-IMD"/>
                         <outlet property="counterLabel" destination="v1X-pG-ggP" id="C19-bo-5c3"/>
                         <outlet property="imageView" destination="PiP-WT-Kyi" id="3Fo-kz-zvF"/>
+                        <outlet property="noButton" destination="qKf-8v-9FD" id="6xJ-fx-1T2"/>
                         <outlet property="textLabel" destination="aib-Hw-uFH" id="llg-6P-Cg7"/>
+                        <outlet property="yesButton" destination="mI6-q5-9Uc" id="9E8-yq-qon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

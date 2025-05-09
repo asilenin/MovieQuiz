@@ -1,0 +1,49 @@
+import XCTest
+@testable import MovieQuiz
+
+final class MovieQuizViewControllerMock: MovieQuizViewControllerProtocol {
+    
+    func show(quiz step: QuizStepViewModel){
+        
+    }
+    
+    func showAlert(model: AlertModel){
+        
+    }
+    
+    func showLoadingIndicator(){
+        
+    }
+    
+    func hideLoadingIndicator(){
+        
+    }
+    
+    func enableTapOnButtons (_ isEnabled: Bool){
+        
+    }
+    
+    func restartQuiz(){
+        
+    }
+    
+    func showBorder(isCorrect: Bool){
+        
+    }
+}
+
+final class MovieQuizPresenterTests: XCTestCase {
+    func testPresenterConvertModel() throws {
+        let viewControllerMock = MovieQuizViewControllerMock()
+        let sut = MovieQuizPresenter(viewController: viewControllerMock)
+        
+        let emptyData = Data()
+        let question = QuizQuestion(image: emptyData, text: "Question Text", correctAnswer: true)
+        let viewModel = sut.convert(model: question)
+        
+        XCTAssertNotNil(viewModel.imageData)
+        XCTAssertEqual(viewModel.question, "Question Text")
+        XCTAssertEqual(viewModel.questionNumber, "1/10")
+       
+    }
+}

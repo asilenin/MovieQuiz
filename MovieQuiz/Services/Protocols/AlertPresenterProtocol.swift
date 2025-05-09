@@ -1,3 +1,3 @@
 protocol AlertPresenterProtocol {
-    func show(quiz result: QuizResultsViewModel)
+    func show(model: AlertModel)
 }
